@@ -1,6 +1,6 @@
 {
-  "name": "@iterables/iterable-map",
-  "version": "1.0.1",
+  "name": "@iterables/map",
+  "version": "1.0.0",
   "main": "iterables-map.js",
   "description": "a map function for iterables",
   "scripts": {
