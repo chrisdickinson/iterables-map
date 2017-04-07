@@ -1,10 +1,15 @@
 {
   "name": "@iterables/iterable-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "iterables-map.js",
   "description": "a map function for iterables",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+    "prerelease": "npm run update-contrib && npm run update-coc",
+    "release": "standard-version",
+    "test": "tap test.js",
+    "posttest": "standard"
   },
   "keywords": [],
   "author": "Chris Dickinson <chris@neversaw.us> (http://neversaw.us/)",
@@ -17,14 +22,6 @@
     "url": "https://github.com/chrisdickinson/iterables-map/issues"
   },
   "homepage": "https://github.com/chrisdickinson/iterables-map#readme",
-  "scripts": {
-    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'",
-    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
-    "prerelease": "npm run update-contrib && npm run update-coc",
-    "release": "standard-version",
-    "test": "tap test.js",
-    "posttest": "standard"
-  },
   "devDependencies": {
     "standard": "^10.0.1",
     "standard-version": "^4.0.0",
